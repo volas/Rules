@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/page-style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/page-style.css?v=' | append: site.github.build_revision | relative_url }}"> <!-- this is not good... -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="icon" href="https://taucetistation.org/image/favicon.png">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
@@ -37,8 +39,8 @@
         <div id="title">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <p>Последнее обновление {{ site.github.latest_release.published_at | date_to_string}}</p>
           <hr>
+          <p class="credits right">Последнее обновление: {{ site.github.latest_release.published_at | date_to_string}}</p>
         </div>
 
         {{ content }}
@@ -46,7 +48,7 @@
       </section>
 
       <footer>
-        <hr>
+        <hr class="footer-line">
         <p>
           Замечания и предложения по правилам можно направлять в <a href="{{ site.github.repository_url }}">репозиторий</a>.
         </p>

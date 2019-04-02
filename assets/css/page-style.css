@@ -21,6 +21,7 @@ body, html {
 
 section #title {
 	margin: 0;
+	overflow: hidden;/*cf*/
 }
 
 .wrapper section {
@@ -28,6 +29,30 @@ section #title {
 }
 
 /* styles */
+
+body {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, th {
+	font-family: 'Roboto', sans-serif;
+}
+
+strong, th {
+	font-weight: 700;
+}
+
+section #title h1,
+section #title p,
+section #title .credits {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+section #title h1,
+section #title p {
+	font-weight: 400;
+}
 
 body {
 	/* Space background by GoonStation under Creative Commons 3.0 BY-SA license */
@@ -42,6 +67,24 @@ body {
 	background-color: #373735;
 }
 
+blockquote {
+	border-color: #f3e387;
+}
+
+hr {
+	background: #db4935;
+	height: 2px;
+}
+
+/* hr.footer-line {
+	background: #db4935;
+} */
+
 /* content */
 
-
+.dontbeadick {
+	float: right;
+	margin: 10px 0 0 10px;
+	width: 280px;
+	max-width: 50%;
+}
