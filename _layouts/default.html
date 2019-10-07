@@ -40,7 +40,7 @@
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
           <hr>
-          <p class="credits right"><a href="https://github.com/TauCetiStation/Rules/releases" target="_blank">Последнее обновление: {{ site.github.latest_release.published_at | date_to_string}}</a></p>
+          <p class="credits right">Последнее обновление: <a href="https://github.com/TauCetiStation/Rules/releases" target="_blank">{{ site.github.latest_release.published_at | date_to_string}}</a></p>
         </div>
 
         {{ content }}
