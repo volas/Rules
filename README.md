@@ -1,3 +1,4 @@
+<!-- 6 rev -->
 # rules
 
 Актуальная оформленная версия правил доступна на https://rules.taucetistation.org/
