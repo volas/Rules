@@ -2,7 +2,7 @@
 name: On release actions
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on new release
   release:
     types: [created]
 
@@ -49,3 +49,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  announce:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discord Announce
+        uses: tsickert/discord-webhook@v6.0.0
+        with:
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          content: "Доступна новая ревизия правил на <https://rules.taucetistation.org/>! [Чеинжлог](https://github.com/TauCetiStation/Rules/releases/)."
